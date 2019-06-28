@@ -26,9 +26,12 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
+        $schedule->call(function(){
+            \Log::Info('diaomao');
+        })->everyMinute();
     }
 
-    /**
+    /**..l
      * Register the commands for the application.
      *
      * @return void
